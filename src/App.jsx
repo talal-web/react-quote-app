@@ -1,12 +1,5 @@
-function App() {
-  return (
-    <div>
-      <h1>Hello Vite + React</h1>
-    </div>
-  );
-}
+import { useState } from 'react';
 
-export default App;
 const quotes = [
   "Don't watch the clock; do what it does. Keep going.",
   "Success is not in what you have, but who you are.",
@@ -20,7 +13,6 @@ const quotes = [
 function getRandomQuote() {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
-import { useState } from 'react';
 
 function App() {
   const [quote, setQuote] = useState(getRandomQuote());
@@ -55,4 +47,5 @@ function App() {
         New Quote
       </button>
     </div>
-  );
+  );}
+  export default App;
