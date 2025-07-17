@@ -20,3 +20,15 @@ const quotes = [
 function getRandomQuote() {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
+import { useState } from 'react';
+
+function App() {
+  const [quote, setQuote] = useState(getRandomQuote());
+
+  const handleNewQuote = () => {
+    let newQuote = getRandomQuote();
+    while (newQuote === quote) {
+      newQuote = getRandomQuote();
+    }
+    setQuote(newQuote);
+  };
