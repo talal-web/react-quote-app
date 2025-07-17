@@ -32,3 +32,27 @@ function App() {
     }
     setQuote(newQuote);
   };
+  return (
+    <div style={{
+      display: 'flex', flexDirection: 'column',
+      justifyContent: 'center', alignItems: 'center',
+      height: '100vh', background: '#f0f8ff',
+      padding: '20px', textAlign: 'center'
+    }}>
+      <h1>🌟 Daily Quote</h1>
+      <blockquote style={{
+        fontSize: '1.5rem', fontStyle: 'italic',
+        margin: '20px 0', maxWidth: '600px'
+      }}>
+        “{quote}”
+      </blockquote>
+      <button onClick={handleNewQuote} style={{
+        padding: '10px 20px', fontSize: '1rem',
+        backgroundColor: '#007bff', color: '#fff',
+        border: 'none', borderRadius: '5px',
+        cursor: 'pointer'
+      }}>
+        New Quote
+      </button>
+    </div>
+  );
